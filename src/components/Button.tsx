@@ -3,9 +3,9 @@ interface ButtonProp{
 }
 const Button: React.FC<ButtonProp> = ({text}) => {
   return (
-    <div className="px-4">
+    <div className="px-4 lg:px-0">
         <a
-            href="/home"
+            href="/"
             className="inline-block text-yellow-500 border font-bold py-1 px-5 rounded-4xl hover:-scale-105"
           >
             {text}

@@ -12,20 +12,17 @@ const TrustedCompanies = () => {
   ];
 
   return (
-    <div className="bg-black py-10 text-white text-center">
-      <h2 className="text-2xl font-bold mb-4">
-        Trusted by 200+ companies around the world
-      </h2>
+    <div className="bg-black pb-20 text-white text-center">
       <Marquee speed={50} gradient={false}>
         {logos.map((logo, index) => (
-          <div key={index} className="mx-4 my-10">
+          <div key={index} className="lg:mx-4 mx-3 lg:my-5 my-3">
             <MarqueeBox icon={logo} title="img"/>
           </div>
         ))}
       </Marquee>
       <Marquee speed={50} gradient={false}>
         {logos.map((logo, index) => (
-          <div key={index} className="mx-4">
+          <div key={index} className="lg:mx-4 mx-3 lg:my-5 mt-3">
             <MarqueeBox icon={logo} title="img"/>
           </div>
         ))}

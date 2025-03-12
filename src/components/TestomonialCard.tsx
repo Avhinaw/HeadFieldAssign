@@ -8,7 +8,7 @@ interface TestimonialProps {
   
   const TestimonialCard: React.FC<TestimonialProps> = ({ name, position, company, message, image }) => {
     return (
-      <div className="min-w-[300px] max-w-[350px] bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-700">
+      <div className="min-w-[300px] max-w-[350px] min- bg-gray-900 text-white py-2 px-3 lg:p-6 rounded-lg shadow-lg border border-gray-700">
         <div className="flex items-center gap-4">
           <img src={image} alt={name} className="w-12 h-12 rounded-full border border-gray-500" />
           <div>
