@@ -1,6 +1,6 @@
 function Idea() {
     return (
-      <div className="w-full bg-yellow-500 px-4 py-36 flex flex-col items-center justify-center text-center gap-4">
+      <div className="w-full bg-yellow-500 px-4 py-36 flex flex-col items-center justify-center text-center gap-4 rounded-lg">
         <h2 className="text-3xl font-semibold text-black mb-2">
           Let’s discuss <span className="font-bold">the idea</span>
         </h2>
@@ -13,9 +13,9 @@ function Idea() {
           <input
             type="email"
             placeholder="Your email"
-            className="px-4 py-2 bg-transparent outline-none w-64"
+            className="px-4 py-2 bg-transparent outline-none w-40 lg:w-64"
           />
-          <button className="bg-black text-white px-5 py-2 rounded-full">
+          <button className="bg-black text-white px-5 py-2 rounded-full cursor-pointer">
             SEND
           </button>
         </div>

@@ -63,7 +63,7 @@ const TestimonialsMarquee = () => {
 
   return (
     <div className="relative lg:w-full overflow-hidden">
-      <h2 className="text-white text-2xl font-semibold text-center mb-4">Hear what our customers say:</h2>
+      <h2 className="text-white text-2xl font-semibold text-center mb-8">Hear what our customers say:</h2>
       
       <div className="flex gap-4 overflow-x-scroll hide-scroll" ref={scrollRef}>
         {testimonials.map((testimonial, index) => (
@@ -72,13 +72,13 @@ const TestimonialsMarquee = () => {
       </div>
 
       <button 
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black hidden lg:flex text-white p-2 rounded-full"
         onClick={scrollLeft}
       >
         ◀
       </button>
       <button 
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2 rounded-full"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black hidden lg:flex text-white p-2 rounded-full"
         onClick={scrollRight}
       >
         ▶
