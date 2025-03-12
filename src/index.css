@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+.circle1{
+  position: absolute;
+  bottom: -0%;
+  left: -7%;
+  z-index: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 200px #f46641;
+  width: 25em;
+  height: 25em;
+  background: linear-gradient(-25deg, #8c8f41, #f46641);
+  animation: circleAnimate1 15s infinite; 
+}
+.circle2{
+  position: absolute;
+  top: 10%;
+  right: 0%;
+  border-radius: 50%;
+  box-shadow: 0 0px 200px #8B7BCF;
+  width: 22em;
+  height: 25em;
+  background: linear-gradient(-25deg, #8B7BCF, #37739f);
+  animation: circleAnimate2 15s infinite;
+}
+
+/* @keyframes circleAnimate1 {
+  10% {
+    left: 0%;
+    bottom: 1%;
+  }
+  20% {
+    left: 5%;
+    bottom: 5%;
+  }
+} 
+
+@keyframes circleAnimate2 {
+  7% {
+    right: 10%;
+    top: 12%;
+  }
+  20% {
+    right: 5%;
+    top: 15%;
+  }
+} */
+/* .gradient{
+  text-decoration-color: linear-gradient(-25deg, #9DE8EE, #9DE8EE, #FA7C0B, #9F8CED);
+} */
+
+.gradient {
+  background: linear-gradient(to right, #9DE8EE, #9DE8EE, #FA7C0B, #9F8CED); /* Orange to Light Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Important for proper clipping */
+}
+.hide-scroll::-webkit-scrollbar{
+  display: none;
+}
