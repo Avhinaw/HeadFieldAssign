@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-
+import { RiMenu5Fill } from "react-icons/ri";
+import { useState } from "react";
+import MenuModal from "../components/MenuModal";
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="w-full h-18 bg-transparent text-white z-1001 flex justify-between px-12 fixed shadow-xl">
       <div className="flex items-center gap-3">
@@ -9,6 +12,15 @@ function Header() {
           <h3 className="font-semibold">Shadient.co</h3>
         </Link>
       </div>
+
+<button onClick={() => setIsMenuOpen(true)}>
+<div className={`bg-transparent ml-25 lg:hidden flex h-10 w-32 cursor-pointer ${isMenuOpen ? "hidden" : "flex"}`}>
+<RiMenu5Fill className="text-4xl m-auto mt-0" />
+</div>
+</button>
+<MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+
+
       <div className="hidden lg:flex items-center gap-4">
         <Link to="/about" className="cursor-pointer">
           Company
