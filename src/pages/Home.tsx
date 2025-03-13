@@ -1,4 +1,4 @@
-import { useGSAP } from "@gsap/react"
+// import { useGSAP } from "@gsap/react"
 import gsap from 'gsap'
 import ServiceCard from "../components/ServiceCard"
 import Button from "../components/Button"
