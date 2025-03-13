@@ -8,8 +8,8 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({section, title, desc, textTitle}) => {
   return (
     <>
-    <div className="circle1"></div>
-    <div className="circle2"></div>
+    <div className="w-[20em] h-[22em] lg:w-[25em] lg:h-[25em] circle1"></div>
+    <div className="w-[20em] h-[22em] lg:w-[25em] lg:h-[25em] circle2"></div>
 
         <div className="h-screen w-full z-20 backdrop-blur-2xl bg-[#ffffff1a] flex flex-col justify-center pt-40 px-4 lg:px-32 gap-5">
             <h3 className="text-xl text-yellow-500 font-bold">{section}</h3>

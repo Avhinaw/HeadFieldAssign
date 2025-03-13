@@ -5,7 +5,7 @@ import MenuModal from "../components/MenuModal";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="w-full h-18 bg-transparent text-white z-1001 flex justify-between px-12 fixed shadow-xl">
+    <div className={`w-full h-18 bg-transparent text-white z-1001 flex justify-between px-12 fixed shadow-xl ${isMenuOpen ? "backdrop-blur-none" : "backdrop-blur-xl"}`}>
       <div className="flex items-center gap-3">
       <Link to="/" className="flex items-center gap-3">
           <img className="object-cover h-1/2" src="/Frame.png" alt="logo" />

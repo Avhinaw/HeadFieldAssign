@@ -7,8 +7,6 @@
   z-index: 0;
   border-radius: 50%;
   box-shadow: 0 0 200px #f46641;
-  width: 25em;
-  height: 25em;
   background: linear-gradient(-25deg, #8c8f41, #f46641);
   animation: circleAnimate1 15s infinite; 
 }
@@ -18,8 +16,6 @@
   right: 0%;
   border-radius: 50%;
   box-shadow: 0 0px 200px #8B7BCF;
-  width: 22em;
-  height: 25em;
   background: linear-gradient(-25deg, #8B7BCF, #37739f);
   animation: circleAnimate2 15s infinite;
 }
@@ -33,6 +29,10 @@
     left: 5%;
     bottom: 5%;
   }
+  80%{
+    left: 7%;
+    bottom: 7%;
+  }
 } 
 
 @keyframes circleAnimate2 {
@@ -44,9 +44,10 @@
     right: 5%;
     top: 15%;
   }
-} */
-/* .gradient{
-  text-decoration-color: linear-gradient(-25deg, #9DE8EE, #9DE8EE, #FA7C0B, #9F8CED);
+  80%{
+    right: 3%;
+    top: 18%
+  }
 } */
 
 .gradient {

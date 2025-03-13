@@ -5,20 +5,48 @@ import Button from "../components/Button"
 import Idea from "../components/Idea"
 import TrustedCompanies from "../components/TrustedCompanies"
 import TestimonialsMarquee from "../components/TestomonialMarquee"
+import { useEffect, useRef } from "react"
 
 function Home() {
   
-  useGSAP(() => {
-    gsap.to('.box', {
-      
-    })
-  })
+    const circle1 = useRef(null);
+    const circle2 = useRef(null);
+  
+    useEffect(() => {
+      // Circle 1 Animation
+      gsap.to(circle1.current, {
+        keyframes: [
+          { left: "0%", bottom: "1%", duration: 1.5, ease: "power2.inOut" },
+          { left: "5%", bottom: "5%", duration: 2, ease: "power2.inOut" },
+          { left: "7%", bottom: "7%", duration: 3, ease: "power2.inOut" }
+        ],
+        repeat: -1,
+        yoyo: true
+      });
+  
+      // Circle 2 Animation
+      gsap.to(circle2.current, {
+        keyframes: [
+          { right: "10%", top: "12%", duration: 1.5, ease: "power2.inOut" },
+          { right: "5%", top: "15%", duration: 2, ease: "power2.inOut" },
+          { right: "3%", top: "18%", duration: 3, ease: "power2.inOut" }
+        ],
+        repeat: -1,
+        yoyo: true
+      });
+    }, []);
+
+
+
+
+
+
   return (
     <>
     <div className="h-screen text-white bg-black overflow-x-hidden w-screen max-w-screen">  
 
-    <div className="circle1 lg:w-[25em]"></div>
-    <div className="circle2"></div>
+    <div ref={circle1} className="w-[20em] h-[22em] lg:w-[25em] lg:h-[25em] circle1"></div>
+    <div ref={circle2} className="w-[20em] h-[22em] lg:w-[25em] lg:h-[25em] circle2"></div>
 
         <div className="h-screen w-screen z-20 backdrop-blur-2xl bg-[#ffffff1a]">
           <div className="flex flex-col gap-6 h-screen items-center justify-center">
@@ -44,16 +72,16 @@ function Home() {
 
 
 
-<div className="bg-[#110F0F] w-full h-full lg:h-[90vh] px-4 lg:px-32 py-20 text-white">
+<div className="bg-[#110F0F] w-full h-full lg:h-screen px-4 lg:px-32 py-20 text-white">
   <h4 className="text-center font-bold text-4xl">We Offer</h4>
   <p className="text-center text-[#FFFFFF99] m-auto pt-5 text-sm lg:w-[500px]">Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. </p>
 <div className="flex flex-wrap gap-10 py-10 items-centers justify-center">
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
+<ServiceCard title="Branding" desc="Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" icon="/Frame(2).png"/>
+<ServiceCard title="Web development" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame(3).png"/>
+<ServiceCard title="Digital marketing" desc="Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." icon="/Frame(4).png"/>
+<ServiceCard title="Mobile App" desc="Egestas tellus nunc proin amet tellus tincidunt lacus consequat. Ultrices" icon="/Frame(5).png"/>
+<ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame(6).png"/>
+<ServiceCard title="User testing" desc="Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. Auctor et leo urna est." icon="/Frame(7).png"/>
 </div>
 </div>
 <div className="bg-black lg:h-[60vh] py-12 lg:py-0 gap-6 lg:gap-0 flex lg:flex-row flex-col-reverse text-white lg:items-center ">
