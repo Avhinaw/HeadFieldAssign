@@ -15,10 +15,10 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
       gsap.fromTo(
         modalRef.current,
         { y: "100%", opacity: 0 },
-        { y: "0%", opacity: 1, duration: 0.5, ease: "power3.out" }
+        { y: "0%", opacity: 1, duration: 1, ease: "power3.out" }
       );
     } else {
-      gsap.to(modalRef.current, { y: "100%", opacity: 0, duration: 0.5, ease: "power3.in" });
+      gsap.to(modalRef.current, { y: "100%", opacity: 0, duration: 1, ease: "power3.in" });
     }
   }, [isOpen]);
 
@@ -33,7 +33,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
       <Link to='/'>
         <img src="/Frame.png" alt=""/></Link>
         <Link to='/about'>Company</Link>
-        <Link to='/services'>SERVICES</Link>
+        <Link to='/services'>Services</Link>
         <Link to='/resources'>Resources</Link>
         <Link to='/contact'>Contact</Link>
       </div>

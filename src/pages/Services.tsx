@@ -28,14 +28,14 @@ const Services: React.FC = () => {
       {/* Other Services */}
       <Section title="Other Services">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <ServiceCard title="Mobile App" desc="Egestas tellus nunc proin amet tellus tincidunt lacus." icon="/Frame.png"/>
-          <ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame.png"/>
-          <ServiceCard title="User testing" desc="Sed faucibus faucibus egestas volutpat." icon="/Frame.png"/>
+          <ServiceCard title="Mobile App" desc="Egestas tellus nunc proin amet tellus tincidunt lacus." icon="/Frame(5).png"/>
+          <ServiceCard title="SEO" desc="Integer ante non nunc, eget est justo vel semper nunc." icon="/Frame(6).png"/>
+          <ServiceCard title="User testing" desc="Sed faucibus faucibus egestas volutpat." icon="/Frame(7).png"/>
         </div>
       </Section>
 
       {/* Button */}
-      <div className="mt-6 px-32">
+      <div className="mt-6 lg:px-32 pb-10">
         <Button text ="GO TO HOME" />
       </div>
     </div>
