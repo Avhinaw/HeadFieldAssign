@@ -63,7 +63,7 @@ const TestimonialsMarquee = () => {
 
   return (
     <div className="relative lg:w-full overflow-hidden">
-      <h2 className="text-white text-2xl font-semibold text-center mb-8">Hear what our customers say:</h2>
+      <h2 className="text-white text-2xl font-semibold text-center mb-8">Hear what our customers say :</h2>
       
       <div className="flex gap-4 overflow-x-scroll hide-scroll" ref={scrollRef}>
         {testimonials.map((testimonial, index) => (

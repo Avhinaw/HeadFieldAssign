@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -10,7 +11,7 @@ interface MenuModalProps {
 const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     if (isOpen) {
       gsap.fromTo(
         modalRef.current,
