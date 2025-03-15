@@ -15,7 +15,7 @@ function Idea() {
             placeholder="Your email"
             className="px-4 py-2 bg-transparent outline-none w-40 lg:w-64"
           />
-          <button className="bg-black text-white px-5 py-2 rounded-full cursor-pointer">
+          <button className="bg-[#000000b9] hover:bg-black text-white px-5 py-2 rounded-full cursor-pointer">
             SEND
           </button>
         </div>
