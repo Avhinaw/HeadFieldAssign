@@ -16,10 +16,10 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
       gsap.fromTo(
         modalRef.current,
         { y: "100%", opacity: 0 },
-        { y: "0%", opacity: 1, duration: 1, ease: "power3.out" }
+        { y: "0%", opacity: 1, duration: 1.5, ease: "power3.out" }
       );
     } else {
-      gsap.to(modalRef.current, { y: "100%", opacity: 0, duration: 1, ease: "power3.in" });
+      gsap.to(modalRef.current, { y: "100%", opacity: 0, duration: 1.5, ease: "power3.in" });
     }
   }, [isOpen]);
 
