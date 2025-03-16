@@ -77,31 +77,57 @@ desc:"Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. A
     const circle2 = useRef(null);
   
     useGSAP(() => {
-      // Circle 1 Animation
-      gsap.to(circle1.current, {
-        keyframes: [
-          { x:400, y:-70, duration: 2.0, ease: "power3.inOut" },
-          { x:450, y:-50, duration: 1.5, ease: "power3.inOut" },
-          { x:500, y:-30, duration: 1, ease: "power3.inOut" }
-        ],
-        repeat: -1,
-        yoyo: true
+      const mm = gsap.matchMedia();
+  
+      mm.add("(min-width: 1024px)", () => {
+        // Large screens (Desktop)
+        gsap.to(circle1.current, {
+          keyframes: [
+            { x: 400, y: -70, duration: 2.0, ease: "power3.inOut" },
+            { x: 450, y: -50, duration: 1.5, ease: "power3.inOut" },
+            { x: 500, y: -30, duration: 1, ease: "power3.inOut" },
+          ],
+          repeat: -1,
+          yoyo: true,
+        });
+  
+        gsap.to(circle2.current, {
+          keyframes: [
+            { x: -300, y: -30, duration: 2.0, ease: "power3.inOut" },
+            { x: -400, y: -10, duration: 1.5, ease: "power3.inOut" },
+            { x: -500, y: 10, duration: 1, ease: "power3.inOut" },
+          ],
+          repeat: -1,
+          yoyo: true,
+        });
       });
   
-      // Circle 2 Animation
-      gsap.to(circle2.current, {
-        keyframes: [
-          { x:-300, y:-30, duration: 2.0, ease: "power3.inOut" },
-          { x:-400, y:-10, duration: 1.5, ease: "power3.inOut" },
-          { x:-500, y:10, duration: 1, ease: "power3.inOut" }
-        ],
-        repeat: -1,
-        yoyo: true
+      mm.add("(max-width: 1023px)", () => {
+        // (Tablet & Mobile)
+        gsap.to(circle1.current, {
+          keyframes: [
+            { x: 50, y: -30, duration: 2.0, ease: "power3.inOut" },
+            { x: 60, y: -20, duration: 1.5, ease: "power3.inOut" },
+            { x: 70, y: -10, duration: 1, ease: "power3.inOut" },
+          ],
+          repeat: -1,
+          yoyo: true,
+        });
+  
+        gsap.to(circle2.current, {
+          keyframes: [
+            { x: -150, y: -20, duration: 2.0, ease: "power3.inOut" },
+            { x: -200, y: -10, duration: 1.5, ease: "power3.inOut" },
+            { x: -250, y: 5, duration: 1, ease: "power3.inOut" },
+          ],
+          repeat: -1,
+          yoyo: true,
+        });
       });
-    });
 
 
-
+      return () => mm.kill(); // Clean up on unmount
+    }, []); // to learn
 
 
 
@@ -152,15 +178,15 @@ desc:"Sed faucibus faucibus egestas volutpat, accumsan adipiscing egestas est. A
   </div>
 </div>
 
-<div className='bg-[#110F0F] w-screen flex gap-4 px-32 py-10 text-white'>
+<div className='bg-[#110F0F] w-screen flex flex-col lg:flex-row gap-4 px-4  lg:px-32 py-10 text-white'>
 
 <div className='flex flex-col gap-4'>
-  <h4 className='text-3xl w-[20vw]'>Some pieces of our work</h4>
-  <p className='w-[22vw] text-sm text-[#FFFFFF99]'>Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. </p>
+  <h4 className='text-3xl lg:w-[20vw]'>Some pieces of our work</h4>
+  <p className='lg:w-[22vw] text-sm text-[#FFFFFF99]'>Risus commodo id odio turpis pharetra elementum. Pulvinar porta porta feugiat scelerisque in elit. Morbi rhoncus, tellus, eros consequat magna semper orci a tincidunt. </p>
   <Button text="SHOW MORE" />
 </div>
 
-<div className='flex px-5 gap-10 flex-wrap'>
+<div className='flex px-5 gap-5 lg:gap-10 flex-wrap'>
 {ShowCaseData.map((box, idx)=> (
   <ShowCaseBox key={idx} {...box}/>
 ))}
