@@ -32,7 +32,7 @@ const About: React.FC = () => {
         </section>
   
         {/* Button */}
-        <div className="py-10 lg:py-0 lg:px-32">
+        <div className="py-10 lg:py-0 lg:px-32 px-4">
           <Button text="Go To Home" />
         </div>
         </div>

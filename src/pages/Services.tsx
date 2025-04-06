@@ -35,7 +35,7 @@ const Services: React.FC = () => {
       </Section>
 
       {/* Button */}
-      <div className="mt-6 lg:px-32 pb-10">
+      <div className="mt-6 lg:px-32 pb-10 px-4">
         <Button text ="GO TO HOME" />
       </div>
     </div>
